@@ -1,123 +1,855 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priyanka Diwakar | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#0f172a;
-    color:white;
-}
-header{
-    background:#1e293b;
-    padding:50px;
-    text-align:center;
-}
-h1{
-    margin:0;
-    font-size:42px;
-}
-header p{
-    font-size:20px;
-}
-section{
-    max-width:900px;
-    margin:auto;
-    padding:20px;
-}
-.card{
-    background:#1e293b;
-    margin:20px 0;
-    padding:20px;
-    border-radius:12px;
-}
-h2{
-    color:#38bdf8;
-}
-ul{
-    padding-left:20px;
-}
-a{
-    color:#38bdf8;
-    text-decoration:none;
-}
-a:hover{
-    text-decoration:underline;
-}
-footer{
-    background:#111827;
-    text-align:center;
-    padding:20px;
-    margin-top:30px;
-}
-</style>
+  <meta name="description"
+        content="Priyanka Diwakar - Electronics & Communication Engineering Student Portfolio">
 
+  <title>Priyanka Diwakar | ECE Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #eef6ff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 7%;
+      background: rgba(7,17,31,0.95);
+      border-bottom: 1px solid #1d3047;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #55d6ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #a8b8cc;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #55d6ff;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 60px;
+      align-items: center;
+      padding: 80px 7%;
+      background:
+        radial-gradient(circle at 80% 20%, #12304a, transparent 30%),
+        radial-gradient(circle at 20% 80%, #171c42, transparent 25%);
+    }
+
+    .small-title {
+      color: #55d6ff;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 7vw, 80px);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      display: block;
+      color: #55d6ff;
+    }
+
+    .hero h2 {
+      font-size: 22px;
+      margin-bottom: 18px;
+      color: #d8e6f5;
+    }
+
+    .hero p {
+      color: #a8b8cc;
+      max-width: 650px;
+      font-size: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-weight: bold;
+      border: 1px solid #31465e;
+    }
+
+    .primary {
+      background: #55d6ff;
+      color: #06101b;
+    }
+
+    .secondary:hover {
+      background: #10243b;
+    }
+
+    .social {
+      margin-top: 22px;
+      display: flex;
+      gap: 25px;
+      color: #a8b8cc;
+      font-weight: bold;
+    }
+
+    .social a:hover {
+      color: #55d6ff;
+    }
+
+    /* PROFILE CARD */
+    .profile-card {
+      background: #0d1b2e;
+      border: 1px solid #20354d;
+      border-radius: 25px;
+      padding: 35px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 115px;
+      height: 115px;
+      margin: auto;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #55d6ff, #8b7cff);
+      color: #06101b;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .profile-card p {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      margin-top: 25px;
+    }
+
+    .stats strong {
+      display: block;
+      color: #55d6ff;
+    }
+
+    .stats small {
+      color: #a8b8cc;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 7%;
+    }
+
+    .dark-section {
+      background: #091728;
+    }
+
+    .section-title {
+      margin-bottom: 40px;
+    }
+
+    .section-title p {
+      color: #55d6ff;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-top: 10px;
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 50px;
+    }
+
+    .about p {
+      color: #a8b8cc;
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .info-box {
+      background: #0d1b2e;
+      border: 1px solid #20354d;
+      border-radius: 18px;
+      padding: 25px;
+    }
+
+    .info-box div {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 15px 0;
+      border-bottom: 1px solid #20354d;
+    }
+
+    .info-box div:last-child {
+      border-bottom: none;
+    }
+
+    .info-box span {
+      color: #a8b8cc;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .skill {
+      background: #0d1b2e;
+      border: 1px solid #20354d;
+      border-radius: 18px;
+      padding: 25px;
+    }
+
+    .skill h3 {
+      margin: 10px 0;
+    }
+
+    .skill p {
+      color: #a8b8cc;
+      font-size: 14px;
+    }
+
+    .number {
+      color: #55d6ff;
+      font-weight: bold;
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+    }
+
+    .project {
+      background: #0d1b2e;
+      border: 1px solid #20354d;
+      border-radius: 20px;
+      padding: 28px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project.featured {
+      background: #102d45;
+    }
+
+    .tag {
+      color: #55d6ff;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin: 10px 0;
+    }
+
+    .project h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: #a8b8cc;
+    }
+
+    .project a {
+      margin-top: auto;
+      padding-top: 20px;
+      color: #55d6ff;
+      font-weight: bold;
+    }
+
+    /* CERTIFICATES */
+    .certificates {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .certificate {
+      background: #0d1b2e;
+      border: 1px solid #20354d;
+      border-radius: 18px;
+      padding: 25px;
+    }
+
+    .certificate h3 {
+      margin-bottom: 8px;
+    }
+
+    .certificate p {
+      color: #a8b8cc;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .contact p {
+      color: #a8b8cc;
+      font-size: 17px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #a8b8cc;
+      border-top: 1px solid #20354d;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media(max-width:900px) {
+      .hero,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .skills {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .certificates {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+    }
+
+    @media(max-width:600px) {
+      nav {
+        padding: 15px 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 65px 5%;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .skills,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-<h1>Priyanka Diwakar</h1>
-<p>Electronics & Communication Engineering Student</p>
-</header>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#home" class="logo">Priyanka<span>.</span></a>
 
-<section>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<div class="card">
-<h2>About Me</h2>
-<p>
-I am an Electronics and Communication Engineering (ECE) student passionate about Embedded Systems, Arduino, VLSI, Python and practical engineering projects. I enjoy learning new technologies and building innovative engineering solutions.
-</p>
-</div>
 
-<div class="card">
-<h2>Education</h2>
-<p><strong>B.Tech in Electronics & Communication Engineering (ECE)</strong></p>
-</div>
+  <!-- HERO -->
+  <section class="hero" id="home">
 
-<div class="card">
-<h2>Skills</h2>
-<ul>
-<li>C Programming</li>
-<li>Python</li>
-<li>Arduino</li>
-<li>Embedded Systems</li>
-<li>VLSI Basics</li>
-<li>HTML & CSS</li>
-<li>Git & GitHub</li>
-</ul>
-</div>
+    <div>
+      <p class="small-title">ELECTRONICS & COMMUNICATION ENGINEERING</p>
 
-<div class="card">
-<h2>Projects</h2>
-<ul>
-<li>Electronic Voting Machine (EVM)</li>
-<li>Smart Dustbin</li>
-</ul>
-</div>
+      <h1>
+        Hi, I'm
+        <span>Priyanka Diwakar</span>
+      </h1>
 
-<div class="card">
-<h2>Certificates</h2>
-<ul>
-<li>Python Essentials 1 - Cisco Networking Academy</li>
-<li>Python Foundation Certification - Infosys Springboard</li>
-</ul>
-</div>
+      <h2>
+        ECE Student • Embedded Systems • VLSI • Python
+      </h2>
 
-<div class="card">
-<h2>Contact</h2>
-<p><strong>GitHub:</strong> <a href="https://github.com/PriyankaDiwakar02" target="_blank">github.com/PriyankaDiwakar02</a></p>
-<p><strong>LinkedIn:</strong> Add your LinkedIn profile link here.</p>
-</div>
+      <p>
+        I enjoy building practical electronics projects and learning
+        technologies that connect hardware, software and real-world
+        applications.
+      </p>
 
-</section>
+      <div class="buttons">
+        <a href="#projects" class="btn primary">
+          View Projects
+        </a>
 
-<footer>
-<p>&copy; 2026 Priyanka Diwakar. All Rights Reserved.</p>
-</footer>
+        <a href="#contact" class="btn secondary">
+          Contact Me
+        </a>
+      </div>
+
+      <div class="social">
+        <a href="https://github.com/PriyankaDiwakar02" target="_blank">
+          GitHub ↗
+        </a>
+
+        <a href="https://www.linkedin.com/" target="_blank">
+          LinkedIn ↗
+        </a>
+      </div>
+    </div>
+
+
+    <div class="profile-card">
+
+      <div class="avatar">
+        PD
+      </div>
+
+      <h3>ECE Student</h3>
+
+      <p>
+        Building • Learning • Improving
+      </p>
+
+      <div class="stats">
+        <div>
+          <strong>ECE</strong>
+          <small>Branch</small>
+        </div>
+
+        <div>
+          <strong>7+</strong>
+          <small>Skills</small>
+        </div>
+
+        <div>
+          <strong>4+</strong>
+          <small>Projects</small>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="section-title">
+      <p>ABOUT ME</p>
+      <h2>Turning ideas into practical projects.</h2>
+    </div>
+
+    <div class="about">
+
+      <div>
+
+        <p>
+          I am an Electronics & Communication Engineering student
+          with an interest in Embedded Systems, Arduino, VLSI and
+          programming.
+        </p>
+
+        <p>
+          I like working on hands-on projects that solve practical
+          problems and help me understand how hardware and software
+          work together.
+        </p>
+
+        <p>
+          I am continuously improving my technical skills through
+          projects, certifications and coding practice.
+        </p>
+
+      </div>
+
+
+      <div class="info-box">
+
+        <div>
+          <span>Focus</span>
+          <strong>Embedded & Electronics</strong>
+        </div>
+
+        <div>
+          <span>Programming</span>
+          <strong>C • Python</strong>
+        </div>
+
+        <div>
+          <span>Hardware</span>
+          <strong>Arduino</strong>
+        </div>
+
+        <div>
+          <span>Tools</span>
+          <strong>Git & GitHub</strong>
+        </div>
+
+        <div>
+          <span>Learning</span>
+          <strong>VLSI & Web</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+  <section id="skills" class="dark-section">
+
+    <div class="section-title">
+      <p>TECHNICAL SKILLS</p>
+      <h2>My technical toolkit.</h2>
+    </div>
+
+    <div class="skills">
+
+      <div class="skill">
+        <span class="number">01</span>
+        <h3>C Programming</h3>
+        <p>
+          Programming fundamentals and problem solving.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span class="number">02</span>
+        <h3>Python</h3>
+        <p>
+          Programming, logic building and basic automation.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span class="number">03</span>
+        <h3>Arduino</h3>
+        <p>
+          Microcontroller-based electronics projects.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span class="number">04</span>
+        <h3>Embedded Systems</h3>
+        <p>
+          Hardware and software integration.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span class="number">05</span>
+        <h3>VLSI Basics</h3>
+        <p>
+          Digital electronics and VLSI fundamentals.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span class="number">06</span>
+        <h3>HTML & CSS</h3>
+        <p>
+          Responsive websites and portfolio design.
+        </p>
+      </div>
+
+      <div class="skill">
+        <span class="number">07</span>
+        <h3>Git & GitHub</h3>
+        <p>
+          Version control and project documentation.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects">
+
+    <div class="section-title">
+      <p>FEATURED WORK</p>
+      <h2>Projects I'm building.</h2>
+    </div>
+
+    <div class="projects">
+
+      <article class="project featured">
+
+        <span class="number">01</span>
+
+        <p class="tag">
+          ECE • EMBEDDED
+        </p>
+
+        <h3>
+          Electronic Voting Machine
+        </h3>
+
+        <p>
+          An ECE project focused on electronic voting and practical
+          embedded-system concepts.
+        </p>
+
+        <a
+          href="https://github.com/PriyankaDiwakar02/EVM-Project-"
+          target="_blank">
+          View on GitHub ↗
+        </a>
+
+      </article>
+
+
+      <article class="project">
+
+        <span class="number">02</span>
+
+        <p class="tag">
+          ARDUINO • EMBEDDED
+        </p>
+
+        <h3>
+          Smart Dustbin
+        </h3>
+
+        <p>
+          A sensor-based smart dustbin project demonstrating
+          automation and embedded-system concepts.
+        </p>
+
+        <a
+          href="https://github.com/PriyankaDiwakar02/Smart-Dustbin-Project-1"
+          target="_blank">
+          View on GitHub ↗
+        </a>
+
+      </article>
+
+
+      <article class="project">
+
+        <span class="number">03</span>
+
+        <p class="tag">
+          HTML • CSS
+        </p>
+
+        <h3>
+          Personal Portfolio
+        </h3>
+
+        <p>
+          Responsive personal website showcasing skills,
+          projects and certifications.
+        </p>
+
+        <a
+          href="https://github.com/PriyankaDiwakar02/portfolio"
+          target="_blank">
+          View on GitHub ↗
+        </a>
+
+      </article>
+
+
+      <article class="project">
+
+        <span class="number">04</span>
+
+        <p class="tag">
+          PROGRAMMING
+        </p>
+
+        <h3>
+          LeetCode Solutions
+        </h3>
+
+        <p>
+          Coding practice repository focused on improving
+          programming logic and problem solving.
+        </p>
+
+        <a
+          href="https://github.com/PriyankaDiwakar02/LeetCode-Solutions"
+          target="_blank">
+          View on GitHub ↗
+        </a>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="dark-section">
+
+    <div class="section-title">
+      <p>CERTIFICATIONS</p>
+      <h2>Learning beyond the classroom.</h2>
+    </div>
+
+    <div class="certificates">
+
+      <div class="certificate">
+        <h3>Networking Certification</h3>
+        <p>
+          Technical learning and networking fundamentals.
+        </p>
+      </div>
+
+      <div class="certificate">
+        <h3>Python Certification</h3>
+        <p>
+          Python programming and practical learning.
+        </p>
+      </div>
+
+      <div class="certificate">
+        <h3>Technical Courses</h3>
+        <p>
+          Additional courses and skill-development programs.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="contact">
+
+      <div class="section-title">
+        <p>LET'S CONNECT</p>
+
+        <h2>
+          Open to learning & opportunities.
+        </h2>
+      </div>
+
+      <p>
+        Interested in electronics, embedded systems,
+        projects and entry-level technology opportunities.
+      </p>
+
+      <div class="buttons" style="justify-content:center;">
+
+        <a
+          href="https://github.com/PriyankaDiwakar02"
+          target="_blank"
+          class="btn primary">
+          GitHub ↗
+        </a>
+
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          class="btn secondary">
+          LinkedIn ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Priyanka Diwakar • Electronics & Communication Engineering
+  </footer>
 
 </body>
 </html>
